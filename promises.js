@@ -23,4 +23,11 @@ function createUsers(users) {
   })
 }
 
+function aff(users){
+  Promise.all(users).then(function(){
+    console.log('Fini');
+  });
+}
+
 // Votre code ici (8 lignes)
+getUsers().then(createUsers).then(aff);
